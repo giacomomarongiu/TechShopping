@@ -12,16 +12,24 @@ fun main(){
     shoppigList.add("Pippo Franco")
     shoppigList.remove(element = "Paperino")
     shoppigList.add("Paperina")
-println(shoppigList)
+//println(shoppigList)
 
     shoppigList.removeAt(1)
-    println(shoppigList)
-var isItInside = shoppigList.contains("Pippo")
+    //println(shoppigList)
+    var isItInside = shoppigList.contains("Pippo")
 
     if (isItInside){
         println("E' presente")
     }
     shoppigList.add(2,"Raffaello")
-    println(shoppigList)
+    //println(shoppigList)
 
+    for(item in shoppigList){
+        println(item)
+        if (item=="Raffaello"){
+            shoppigList.removeFirst()
+            println(shoppigList)
+            break
+        }
+    }
 }
