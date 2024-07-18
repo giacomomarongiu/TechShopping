@@ -24,12 +24,34 @@ fun main(){
     shoppigList.add(2,"Raffaello")
     //println(shoppigList)
 
-    for(item in shoppigList){
-        println(item)
-        if (item=="Raffaello"){
-            shoppigList.removeFirst()
-            println(shoppigList)
-            break
-        }
+    println(shoppigList.size)
+    //equivalente a lenght in JS
+    for(index in 0 until shoppigList.size){
+        //Così stampiamo i numeri (gli indici)
+        println(index)
+        println(shoppigList[index])
+        println("il signor ${shoppigList[index]} ha indice ${index}")
+
+        /*  if (item=="Raffaello"){
+              shoppigList.removeFirst()
+              println(shoppigList)
+              break
+          } */
+    }
+    //stessa cosa ma con indice fisso
+    for(index in 0 until 2){
+        //Così stampiamo i numeri (gli indici)
+        println(index)
+        println(shoppigList[index])
+        println("il signor ${shoppigList[index]} ha indice ${index}")
+
+    }
+    //stessa cosa ma con indice incluso
+    for(index in 0 .. 2){
+        //Così stampiamo i numeri (gli indici)
+        println(index)
+        println(shoppigList[index])
+        println("il signor ${shoppigList[index]} ha indice ${index}")
+
     }
 }
